@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddProductController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="800.0" style="-fx-background-color: #002171;">
+         <children>
+            <Label alignment="CENTER" layoutY="12.0" prefHeight="52.0" prefWidth="800.0" text="InvoiceApp" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="75.0" prefHeight="15.0" prefWidth="800.0" style="-fx-background-color: #0d47a1;" />
+      <Label alignment="CENTER" layoutY="103.0" prefHeight="35.0" prefWidth="800.0" text="Zapisane dane">
+         <font>
+            <Font name="Open Sans" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addProductName" layoutX="100.0" layoutY="440.0" prefHeight="30.0" prefWidth="190.0" promptText="Nazwa produktu">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="addProdcutNetto" layoutX="300.0" layoutY="440.0" prefHeight="30.0" prefWidth="100.0" promptText="Cena netto">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="addProductVat" layoutX="410.0" layoutY="440.0" prefHeight="30.0" prefWidth="90.0" promptText="VAT">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font></TextField>
+      <Button fx:id="addProductSaveButton" layoutX="356.0" layoutY="530.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" text="Zapisz">
+         <font>
+            <Font name="Open Sans" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="addProductBackButton" layoutX="77.0" layoutY="530.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" text="Wróć" />
+      <Button fx:id="newProductButton" layoutX="250.0" layoutY="530.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Nowe dane" />
+      <Button fx:id="deleteProductButton" layoutX="510.0" layoutY="530.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Usuń" />
+      <Button fx:id="editProductButton" layoutX="610.0" layoutY="530.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="Edytuj" />
+      <TableView fx:id="productTableView" layoutX="100.0" layoutY="156.0" prefHeight="263.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="productNameColumn" prefWidth="317.0" text="Nazwa produktu/usługi" />
+            <TableColumn fx:id="productNettoColumn" minWidth="0.0" prefWidth="149.0" text="Cena netto" />
+            <TableColumn fx:id="productVatColumn" prefWidth="130.0" text="VAT" />
+            <TableColumn fx:id="productIDColumn" prefWidth="50.0" text="product_id" visible="false" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
